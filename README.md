@@ -12,6 +12,14 @@ It offers various tools to generate and validate Citrus related test code in the
 - Various Citrus-specific static code analysis checks
 - Code folding of certain containers and Hamcrest condition expressions for easier comprehension of test code
 
+## Purchase license
+
+The plugin will be available via a paid license.
+
 ## Supported IDEs
 
 The list of supported IDEs include all free versions of IntelliJ (Community, Educational, etc.) as well as Ultimate.
+
+# Documentation
+
+The documentation will be available on its dedicated website once the plugin is released.
