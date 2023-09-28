@@ -19,18 +19,21 @@
 - **Citrus registry**: Added an intention action to extract `CitrusContext.bind()` calls to `@BindToRegistry` fields and methods.
 - **Resource injection**: Added an inspection to report injected `@CitrusTest` test method parameters when they are not annotated with `@CitrusResource`.
 - **Citrus configuration**: Added code completion for Citrus system properties, and values of some of them, in the `citrus-application.properties` file.
+- **Citrus configuration**: Added a custom icon for the `citrus-application.properties` file in the IDE Project View.
 - **Test variables**: Added code folding for `variable(<name>, <value>)` test variable creation calls to fold them as Java-style `var <name> = <value>` statements.
 - **SQL**: Added code completion for SQL transaction isolation levels in the argument of `sql()/query().transactionIsolationLevel(...)`.
 - **Test actions**: Added inspection to report `InputAction.Builder#answers()` calls with no argument specified.
 - **Test actions**: Added class references to `JavaAction.Builder#java(String)` and `JavaAction.Builder#className(String)`.
 - **Test actions**: Added XML language injection to `TransformAction.Builder.source(String)` and `TransformAction.Builder.xslt(String)`.
-- **Test actions**: Added Groovy language injection to `ExecuteSQLQueryAction.Builder.groovy(String)`, `GroovyAction.Builder.groovy(String)` and `GroovyAction.Builder.script(String)`.
-- **Test actions**: Added class references and code completion of `Throwable` classes to `Assert.Builder#exception(String)`.
+- **Test actions**: Added Groovy language injection to `ExecuteSQLQueryAction.Builder.groovy(String)`, `ExecuteSQLQueryAction.Builder.validateScript(String, String)`,
+  `GroovyAction.Builder.groovy(String)` and `GroovyAction.Builder.script(String)`.
+- **Test actions**: Added class references of `Throwable` classes to `Assert.Builder#exception(String)`.
 - **Test actions**: Added inspection to report non-Throwable classes specified in `Assert.Builder#exception(String)`.
 - **Message validation**: Added XPath language injection for `XpathMessageValidationContext.Builder#expression(String, String)` and `XmlMessageValidationContext.XmlValidationContextBuilder#ignore(String)`.
 - **Messaging**: Added code completion for `MessageType` values when sending and receiving messages.
 - **Messaging**: Added code completion for JMS and Kafka specific header names in `MessageBuilderSupport.header(String, Object)` when sending and receiving messages. If the concrete Endpoint
-  type can be evaluated from the `send()` or `receive()` action call, only the headers specific to that type of messaging is completed.
+  type can be evaluated from the `send()` or `receive()` action call, only the headers specific to that type of messaging are completed.
+- **Messaging**: Added code completion for JMS and Kafka specific header names in `Message.setHeader()`, `Message.getHeader()` and `Message.removeHeader()` calls.
 - **Messaging**: Added inspection to report and replace JMS and Kafka specific header names with their respective `JmsMessageHeaders` and `KafkaMessageHeaders` constants.
 - **Messaging**: Added code completion for content types in HTTP related `contentType()` and `accept()` method call arguments.
 - **Citrus 4.x**: Added support for the new package structure introduced in Citrus 4.0.0.
@@ -39,6 +42,11 @@
 - **Containers**: Added code folding for `HamcrestConditionExpression.assertThat()` calls to collapse them into the argument list of `assertThat()`.
 - **Functions**: Added simple annotator/syntax highlighting for Citrus function expressions.
 - **Validation**: Added simple annotator/syntax highlighting for Citrus validation matchers.
+- **Validation**: Added Groovy language injection to `ScriptValidationContext.Builder.script()`.
+- **Validation**: Added code completion of `XsdSchema`-type Spring beans in `XmlValidationContextBuilder.schema(String)`
+  and `XsdSchemaRepository`-type Spring beans in `XmlValidationContextBuilder.schemaRepository(String)`.
+- **Validation**: Added code completion of `SimpleJsonSchema`-type Spring beans in `JsonMessageValidationContext.Builder.schema(String)`
+  and `JsonSchemaRepository`-type Spring beans in `JsonMessageValidationContext.Builder.schemaRepository(String)`.
 - **Endpoints**: Added inspections to validate `JmsEndpointBuilder` call chains: auto-start requires pub-sub-domain to be enabled,
   durable subscription requires auto-start to be enabled, durable subscriber name takes effect only when durable subscription is enabled.
 - **Endpoints**: Added inspections to validate `KafkaEndpointBuilder` call chains: offsetReset must be one of earliest, latest or none. Partition must be a non-negative value.
