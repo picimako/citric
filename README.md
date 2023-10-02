@@ -1,5 +1,7 @@
 # Citric
 
+[![Version](https://img.shields.io/jetbrains/plugin/v/22813-citric.svg)](https://plugins.jetbrains.com/plugin/22813-citric)
+
 Citric is an IntelliJ-based plugin that provides framework integration for the [Citrus](https://citrusframework.org/) framework.
 
 It offers various tools to generate and validate Citrus related test code in the following areas, among others:
