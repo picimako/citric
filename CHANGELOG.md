@@ -1,5 +1,26 @@
 # Citric Changelog
 
+## 1.0.1
+
+### Added
+- [1](https://github.com/picimako/citric/issues/1) - **Spring**: Added generation of `WebServiceClient` and `WebServiceServer` Spring beans.
+- [1](https://github.com/picimako/citric/issues/1): Added Spring bean completion of `WebServiceClient` beans to `SoapActionBuilder#client` and `AssertSoapFault.Builder#endpoint`,
+  `WebServiceServer` beans to `SoapActionBuilder#server` and `AssertSoapFault.Builder#endpoint`, `SoapFaultValidator` beans to `AssertSoapFault.Builder#validator`,
+  `SoapAttachmentValidator` beans to `ReceiveSoapMessageAction.SoapMessageBuilderSupport#attachmentValidatorName`.
+- [1](https://github.com/picimako/citric/issues/1) - **Endpoints**: Added code completion of `SoapMessageFactory` Spring beans in `WebServiceServerBuilder.messageFactory()`.
+- [1](https://github.com/picimako/citric/issues/1) - **Messaging**: Added code completion and reporting (for replacement with utility class constant) of
+  message header values from `HttpMessageHeaders`, `SoapMessageHeaders` and `WsAddressingMessageHeaders`.
+- [1](https://github.com/picimako/citric/issues/1) - **Endpoints**: Added default argument value reporting for methods of `WebServiceClientBuilder` and `WebServiceServerBuilder`.
+- [1](https://github.com/picimako/citric/issues/1): Added Content-Type code completion to `ReceiveSoapMessageAction.SoapMessageBuilderSupport#attachment`, `SoapAttachment#setContentType`
+  from `HttpMessageHeaders`, `SoapMessageHeaders` and `WsAddressingMessageHeaders` classes.
+- [1](https://github.com/picimako/citric/issues/1): Added XML language injection to `AssertSoapFault.Builder#faultDetail`.
+- [1](https://github.com/picimako/citric/issues/1): Added an inspection to report invalid SOAP attachment encoding types in `SoapAttachment#setEncodingType`.
+- [2](https://github.com/picimako/citric/issues/2): Added an action to the **Generate** editor menu to generate `@CitrusTestSource` test methods, similar to how the generation of test, setup and teardown methods work.
+
+### Changed
+- Renamed some of the client and server specific live template variables to simplify long-term maintenance.
+- **Endpoints**: From now on, endpoint Spring bean completion for `HttpActionBuilder#client` and `HttpActionBuilder#server` methods suggest only `HttpClient` and `HttpServer` type endpoints, respectively.
+
 ## 1.0.0
 
 ### Added
