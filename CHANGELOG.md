@@ -1,5 +1,18 @@
 # Citric Changelog
 
+## 1.0.2
+
+### Added
+- [3](https://github.com/picimako/citric/issues/3): Introduced the Citric plugin settings page, and added an option to enable/disable
+  the **@CitrusTestSource Method** action in the **Generate** editor menu.
+- [3](https://github.com/picimako/citric/issues/3): Added plugin settings to configure the list of test DSLs to be code completed in the `type`
+  attribute of a `@CitrusTestSource` test method.
+- [4](https://github.com/picimako/citric/issues/4): Added line markers for various methods accepting resource paths. The line markers recognize classpath
+  resource paths and open the referenced files in a new editor tab.
+- Added code folding for `new ClassPathResource(<path>)` instantiation calls to display them as a shorter `"classpath:<path>"` string,
+  as well as `new FileSystemResource(<path>)` calls to `"file:<path>"`.
+- Added JavaScript language injection into `SeleniumActionBuilder#javascript` and `JavaScriptAction.Builder#script`.
+
 ## 1.0.1
 
 ### Added
