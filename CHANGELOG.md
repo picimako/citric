@@ -1,5 +1,16 @@
 # Citric Changelog
 
+## 1.0.3
+
+### Added
+- [5](https://github.com/picimako/citric/issues/5): Added a line marker for `@CitrusTestSource` annotated test methods.
+  It populates a popup menu with actions to navigate to test files and packages referenced by the annotation.
+- [7](https://github.com/picimako/citric/issues/5): Added an inspection that analyses the configuration of `@CitrusTestSource` annotations,
+  and reports various issues and improvement options on them.
+
+### Fixed
+- Fixed a NullPointerException regarding the `@CitrusTestSource` method generation action.
+
 ## 1.0.2
 
 ### Added
