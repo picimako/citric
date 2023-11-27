@@ -1,5 +1,30 @@
 # Citric Changelog
 
+## 1.0.4
+
+### Added
+- The plugin now works with the Citrus Framework 4.0.0 stable release.
+- [8](https://github.com/picimako/citric/issues/8) - **Quarkus**: `@QuarkusTest` and `@CitrusSupport` annotated test classes are now recognized as Citrus Quarkus test classes.
+- [8](https://github.com/picimako/citric/issues/8) - **Quarkus**: Added an inspection to validate various aspects of Citrus Quarkus test classes and annotations.
+- [6](https://github.com/picimako/citric/issues/6) - **Apache Camel**: Added Spring bean generation for `CamelEndpoint` and `CamelSyncEndpoint`.
+- [6](https://github.com/picimako/citric/issues/6) - **Apache Camel**: Added default argument value reporting for the methods of `CamelSyncEndpointBuilder`.
+- [6](https://github.com/picimako/citric/issues/6) - **Apache Camel**: Added code completion of headers from `CamelMessageHeaders`, as well as *CamelCorrelationId*, *CamelToEndpoint* and *CamelExceptionCaught*.
+- [6](https://github.com/picimako/citric/issues/6) - **Apache Camel**: Added Spring bean code completion of `org.apache.camel.CamelContext` to the `camelContext` attribute of the `@CamelEndpointConfig`
+  and `@CamelSyncEndpointConfig` annotations.
+- [6](https://github.com/picimako/citric/issues/6) - **Apache Camel**: Added Spring bean code completion of `MessageConverter` to the `messageConverter` attribute of the `@CamelEndpointConfig`
+  and `@CamelSyncEndpointConfig` annotations.
+- [9](https://github.com/picimako/citric/issues/9) - **Resource injection**: New inspection to report various issues with class fields related to Citrus-injected resources.
+- [10](https://github.com/picimako/citric/issues/10) - **Endpoints**: New inspection to report various issues with the following endpoint config annotation configurations:
+  `@JmsEndpointConfig`, `@JmsSyncEndpointConfig`, `@KafkaEndpointConfig`, `@HttpClientConfig`, `@HttpServerConfig`, `@WebServiceClientConfig`
+- [11](https://github.com/picimako/citric/issues/11) - **@CitrusTestFactory**: Added an inspection to validate `@CitrusTestFactory` annotated test methods from various aspects.
+- [11](https://github.com/picimako/citric/issues/11) - **@CitrusTestFactory**: Added an action into the editor Generate menu to generate `@CitrusTestFactory` methods in Citrus JUnit 5 test classes.
+
+### Fixed
+- Fixed a NullPointerException regarding classpath and file system resource folding.
+
+### Changed
+- Did some optimization regarding message header values.
+
 ## 1.0.3
 
 ### Added

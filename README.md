@@ -6,14 +6,14 @@ Citric is an IntelliJ-based plugin that provides framework integration for the [
 
 It offers various tools to generate and validate Citrus related test code in the following areas, among others:
 - Citrus specific [JUnit and TestNG test frameworks](https://www.picimako.com/citric/test-frameworks), e.g. for generating Citrus test methods.
-- Validation and generation of Citrus test methods and TestNG specific `@CitrusParameters`
+- Validation and generation of Citrus test methods and TestNG specific `@CitrusParameters`.
 - Code completion of [Endpoint](https://www.picimako.com/citric/endpoints/) Spring beans,
   [XML and JSON schema](https://www.picimako.com/citric/messaging/) Spring beans,
   [properties in `citrus-application.properties`](https://www.picimako.com/citric/citrus-and-spring-configuration/), message headers and more.
 - Basic syntax highlighting for [Citrus functions](https://www.picimako.com/citric/citrus-functions/) and [validation matchers](https://www.picimako.com/citric/messaging/).
 - [Language injections](https://www.picimako.com/citric/language-injections/) at various locations
 - Validation and conversion of [`@BindToRegistry` methods and fields](https://www.picimako.com/citric/citrus-registry-and-resource-injection/)
-- Various Citrus-specific static code analysis checks
+- Numerous Citrus-specific static code analysis checks
 - Code folding of certain [containers](https://www.picimako.com/citric/containers/) and Hamcrest condition expressions for easier comprehension of test code
 
 ## Purchase license
