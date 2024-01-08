@@ -1,5 +1,25 @@
 # Citric Changelog
 
+## 1.0.5
+
+### Added
+- Added an inspection to report JUnit 5 `@ExtendWith(CitrusExtension.class)` annotations, and provide a quick fix to replace them with `@CitrusSupport`.
+- [13](https://github.com/picimako/citric/issues/13): Added code completion in the `citrus-application.properties` file for the `citrus.file.path.charset.parameter` property,
+  and added completion item descriptions for the properties that haven't had one.
+- [14](https://github.com/picimako/citric/issues/14): Added code completion of Citrus functions in Java String literals when completion is invoked at a caret position directly preceded by the `citrus:` function library prefix.
+- [15](https://github.com/picimako/citric/issues/15): Added code completion of boolean values for the `citrus.message.pretty.print` and `citrus.logger.modifier` properties in the `citrus-application.properties` file.
+- [15](https://github.com/picimako/citric/issues/15): Added regexp language injection into the values of `citrus.*.file.name.pattern` properties.
+- [16](https://github.com/picimako/citric/issues/16): Added code completion of Citrus validation matchers in Java String literals when completion is invoked at a caret position preceded and succeeded by an `@` symbol.
+
+### Changed
+- Limited the examination of the combination of `SpringExtension.class` and `CitrusSpringExtension.class` in JUnit 5 `@ExtendWith` annotations to this exact order,
+  since extensions are executed in the order of their declaration.
+- Moved the plugin settings under the *Language & Frameworks* settings page.
+
+### Fixed
+- The `citrus.logger.modifier` property in the `citrus-application.properties` file is now code completed with its proper name.
+- Modified the Test Method Generation section title in the plugin settings to a clearer one.
+
 ## 1.0.4
 
 ### Added

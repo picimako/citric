@@ -25,6 +25,11 @@ to get your hands on one. You can find more information about pricing and licens
 
 The list of supported IDEs include all free versions of IntelliJ (Community, Educational, etc.) as well as Ultimate.
 
-# Documentation
+## Documentation
 
 The documentation is available on its [dedicated website](http://www.picimako.com/citric/).
+
+## OSS attributions
+
+This project derives some documentation from the [Citrus](https://github.com/citrusframework/citrus/) open source project.
+This content is licensed under the Apache License v2.
