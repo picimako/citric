@@ -1,5 +1,24 @@
 # Citric Changelog
 
+## 1.0.6
+
+### Changed
+- Supported IDE range is now 2023.2 - 2024.1-EAP.
+- [18](https://github.com/picimako/citric/issues/18): Added YAML schema for Citrus YAML test case files. Schema is available for Citrus v3.4.0 and 4.x for files ending with `(test|it)\.(yaml|yml)`.
+- [19](https://github.com/picimako/citric/issues/19): Added code completion of Citrus functions and validation matchers to XML, JSON, YAML and Groovy files.
+- Improved code completion of Citrus functions and validation matchers: the caret is no longer moved inside the function/matcher call parentheses
+  for parameterless functions/matchers to provide a bit smoother coding experience.
+- [20](https://github.com/picimako/citric/issues/20): Syntax highlighting is now properly applied for nested Citrus functions and nested validation matchers,
+  as well as string literal, boolean, number and other types of function arguments.
+- [21](https://github.com/picimako/citric/issues/21): Introduced plugin settings to toggle the syntax highlighting for Citrus functions and validation matchers per language.
+- [22](https://github.com/picimako/citric/issues/22): Added `Endpoint` Spring bean completion to `org.citrusframework.camel.dsl.CamelSupport#endpoint(String)`.
+- [23](https://github.com/picimako/citric/issues/23): Added Citrus functions and validation matchers syntax highlighting to XML, JSON, YAML and Groovy files.
+- [24](https://github.com/picimako/citric/issues/24): Added code completion of many more Citrus property keys and values in `citrus-application.properties` files.
+
+### Fixed
+- [20](https://github.com/picimako/citric/issues/20): The `containsIgnoreCase` matcher was missing from the validation matcher syntax highlighting.
+- Fixed some exceptions regarding missing `ReadAction` invocations.
+
 ## 1.0.5
 
 ### Added
