@@ -1,5 +1,34 @@
 # Citric Changelog
 
+## 1.0.7
+
+### Changed
+- Supported IDE range is now 2023.2.1 - 2024.1.
+
+### Added
+- [29](https://github.com/picimako/citric/issues/29): Added custom, test specific icons to XML, YAML and Groovy Citrus test source files.
+- [30](https://github.com/picimako/citric/issues/30): Added respective custom icons on editor tabs and other places for the citrus-application.properties,
+  as well as to XML, YAML and Groovy Citrus test source files.
+- [26](https://github.com/picimako/citric/issues/26): Added a line marker in Citrus YAML test source files to be able to
+  run and debug a `@CitrusTestSource` annotated JUnit or TestNG test method that covers the YAML file the action is invoked from.
+- Added titled separators for the line marker actions displayed for each `@CitrusTestSource` annotated method. They show which parts of the
+  annotation configuration the actions come from.
+- [25](https://github.com/picimako/citric/issues/25): Added an action that can navigate to, or present a list of matching JUnit/TestNG test methods to navigate to,
+  from Citrus YAML test files. The action may be invoked with Ctrl+Shift+T, just like navigation from production classes to
+  their corresponding test classes works in Java projects.
+- `@CitrusTestFactory` and `@CitrusTestSource` test methods can now be generated inside `@Nested` JUnit 5 test classes as well.
+- [31](https://github.com/picimako/citric/issues/31) - **Citrus 4.2.0**: Added code completion for the new, sharding specific, Citrus system properties.
+- [31](https://github.com/picimako/citric/issues/31) - **Citrus 4.2.0**: Added an inspection to report issues with sharding related configuration
+  in the `citrus-application.properties` file.
+
+### Fixed
+- Fixed an exception during project initialization.
+- Fixed an exception that occurred during previewing the quick fix results for the deletion of the `@CitrusTestSource` annotation's name attribute
+  when it matches the test method name.
+- Fixed some exceptions that occurred during retrieving data for the line marker for `@CitrusTestSource` annotated test methods.
+- Fixed the potential blinking or even disappearance of line markers on `@CitrusTestSource` annotated test methods.
+- Fixed an issue that `@Nested` JUnit 5 classes inside Citrus JUnit 5 parent test classes were falsely reported as not valid Citrus test classes.
+
 ## 1.0.6
 
 ### Changed
