@@ -1,5 +1,19 @@
 # Citric Changelog
 
+## 1.0.8
+
+### Added
+- [28](https://github.com/picimako/citric/issues/28): Added the **Run Test** and **Debug Test** actions to the Project View context menu
+  of Citrus Yaml test files.
+- [33](https://github.com/picimako/citric/issues/33): Extended the Run/Debug Citrus YAML test line marker and Project View actions, so that users
+  can select an arbitrary `@CitrusTestSource` annotated method to execute, if the action would fail to recognize test methods as ones covering the particular YAML file.
+- [34](https://github.com/picimako/citric/issues/34): Added Run/Debug actions for Citrus Groovy test files inside a line marker
+  and in the Project View context menu.
+- [35](https://github.com/picimako/citric/issues/35): Added an action that can navigate to matching JUnit/TestNG test methods from Citrus Groovy test files.
+- [37](https://github.com/picimako/citric/issues/37): Added the **Run Test** and **Debug Test** actions inside a line marker and the Project View context menu
+  for Citrus XML and Citrus Spring XML test files.
+- [37](https://github.com/picimako/citric/issues/37): Added actions that can navigate to matching JUnit/TestNG test methods from Citrus XML and Citrus Spring XML test files.
+
 ## 1.0.7
 
 ### Changed
