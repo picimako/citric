@@ -1,5 +1,31 @@
 # Citric Changelog
 
+## 1.0.9
+
+### Added
+- [36](https://github.com/picimako/citric/issues/36): Added support for `file:` and `jar:` resources when looking up resources referenced by te `@CitrusTestSource`, as well as
+  during test source file execution and navigation to matching `@CitrusTestSource`.
+- [36](https://github.com/picimako/citric/issues/36): Added support for `file:` and `jar:` resources when showing line markers for methods accepting Citrus resource paths.
+- [42](https://github.com/picimako/citric/issues/42): Added a line marker in YAML test files to properties that accept
+  `classpath:`, `file:`, `jar:` and `http:` resource paths, so that users can navigate to them.
+- [42](https://github.com/picimako/citric/issues/42): Added HTTP request method code completion for the `actions.waitFor.http.method` property value in YAML test files.
+- [42](https://github.com/picimako/citric/issues/42): Added code completion for various Spring bean names in YAML test files.
+- [42](https://github.com/picimako/citric/issues/42): Added inspection to report non-Throwable classes specified in the `actions.assert.exception` property value in YAML test files.
+- [42](https://github.com/picimako/citric/issues/42): Added class references of `Throwable` classes in the `actions.assert.exception` property value in YAML test files.
+
+### Changed
+- Directory paths are now filtered out from line markers and the test source file recognition when specified in the `sources` attribute
+  of the `@CitrusTestSource` annotation.
+- Citrus 4.x YAML DSL schema is extended with several property descriptions, including examples and default values for code completion, as well as possible property
+  values for automatic validation.
+- Added the Citrus resource path line markers to a couple more Citrus Java methods.
+- Added code completion for a couple more types of Spring beans in the Java DSL.
+
+### Fixed
+- Custom test source file icons are now displayed with a lot less false positive matches.
+- Fixed the YAML DSL schema for some SOAP message related configurations.
+- All types of non-`Throwable` values are now reported in the argument list of `Assert.Builder#exception()`.
+
 ## 1.0.8
 
 ### Added
