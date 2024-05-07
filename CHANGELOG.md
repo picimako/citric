@@ -1,5 +1,12 @@
 # Citric Changelog
 
+## 1.0.10
+
+### Fixed
+- Fixed an exception regarding an HTTP method code completion in YAML test files.
+- Fixed a syntax issue in the YAML DSL schema that may have prevented proper parsing.
+- Fixed the code completion of root-level YAML DSL schema keys.
+
 ## 1.0.9
 
 ### Added
