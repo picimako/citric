@@ -1,5 +1,30 @@
 # Citric Changelog
 
+## 1.0.11
+
+### Added
+- [39](https://github.com/picimako/citric/issues/39): Added HTTP request method code completion for `WaitHttpConditionBuilder#method()` in Groovy test files.
+- [39](https://github.com/picimako/citric/issues/39): Added code completion of Kafka offset reset strategies in `KafkaEndpointBuilder.offsetReset()` in Groovy test files.
+- [39](https://github.com/picimako/citric/issues/39): Added code completion of `SimpleJsonSchema`-type Spring beans in `JsonMessageValidationContext.Builder.schema(String)`
+  and `JsonSchemaRepository`-type Spring beans in `JsonMessageValidationContext.Builder.schemaRepository(String)` in Groovy test files.
+- [39](https://github.com/picimako/citric/issues/39): Added code completion of `XsdSchema`-type Spring beans in `XmlValidationContextBuilder.schema(String)`
+  and `XsdSchemaRepository`-type Spring beans in `XmlValidationContextBuilder.schemaRepository(String)` in Groovy test files.
+- [39](https://github.com/picimako/citric/issues/39): Added code completion for `MessageType` values when sending and receiving messages in Groovy test files.
+- [39](https://github.com/picimako/citric/issues/39): Added code completion for JMS, Kafka, etc. specific header names in `Message.setHeader()`, `Message.getHeader()` and `Message.removeHeader()` calls,
+  as well as in `MessageBuilderSupport.header(String, Object)` when sending and receiving messages in Groovy test files.
+- [39](https://github.com/picimako/citric/issues/39): Added code completion for SQL transaction isolation levels in the argument of `sql()/query().transactionIsolationLevel(...)` in Groovy test files.
+- [39](https://github.com/picimako/citric/issues/39): Added code completion of many different Spring bean types in Groovy test files.
+- [39](https://github.com/picimako/citric/issues/39): Added code folding for `conditional().when().actions()` and `sequential().actions()` call chains in Groovy test files to collapse them into Groovy-style code.
+- [39](https://github.com/picimako/citric/issues/39): Added code folding for `HamcrestConditionExpression.assertThat()` calls to collapse them into the argument list of `assertThat()` in Groovy test files.
+
+### Changed
+- Supported IDE range is now 2023.3 - 2024.2-EAP.
+- Disabled custom test source file icons in IJ-2023.3.* due to IntelliJ Platform changes no suitable alternative to display. They are enabled in IJ-2024.1 and up.
+- Restricted the 'Wait for http method' code completion in YAML files to actual Citrus YAML test files.
+
+### Fixed
+- Eliminated *"Slow operations are prohibited on EDT."* errors in a couple of places, so they won't spam the logs.
+
 ## 1.0.10
 
 ### Fixed
