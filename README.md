@@ -19,7 +19,7 @@ It offers various tools to generate and validate Citrus related test code in the
 ## Purchase license
 
 The plugin is available via a paid license, and you can head over to the [JetBrains Marketplace](https://plugins.jetbrains.com/plugin/22813-citric)
-to get your hands on one. You can find more information about pricing and licensing options there, including a **30-day trial period**.
+to get your hands on one. You can find more information about pricing and licensing options there, including a **14-day trial period**.
 
 ## Supported IDEs
 
