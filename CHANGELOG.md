@@ -1,5 +1,24 @@
 # Citric Changelog
 
+## 1.0.12
+
+### Added
+- [39](https://github.com/picimako/citric/issues/39): Added code folding for `iterate()....().actions()` call chains in Groovy test files to collapse them into Groovy-style code.
+- [39](https://github.com/picimako/citric/issues/39): Added Groovy DSL support for eligible inspections, line markers and references.
+- [44](https://github.com/picimako/citric/issues/44): Disabled the execution of many features (inspections, line markers, etc.) in projects that don't use Citrus.
+- [32](https://github.com/picimako/citric/issues/32): Added an action into the editor Generate menu to generate `@CitrusSpringXmlTestFactory` methods in Citrus JUnit 5 test classes.
+- [32](https://github.com/picimako/citric/issues/32): Added an inspection to validate `@CitrusSpringXmlTestFactory` annotated test methods from various aspects.
+- [32](https://github.com/picimako/citric/issues/32): Added inspections to validate the combined usage of `@CitrusSpringXmlTestFactory` and non-Spring-XML test creation with `CitrusTestFactorySupport`,
+as well as to report various issues on calls on `CitrusTestFactorySupport`.
+- [32](https://github.com/picimako/citric/issues/32): Added a line marker to calls on `CitrusTestFactorySupport`, so that users can navigate to the test source files and directories
+referenced by those calls.
+
+### Changed
+- Improved Groovy expression evaluation logic, so that variable values are now also evaluated e.g. during container folding.
+
+### Fixed
+- Fixed a couple of 'Slow operations are prohibited on EDT' exceptions.
+
 ## 1.0.11
 
 ### Added
