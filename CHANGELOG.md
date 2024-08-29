@@ -1,5 +1,52 @@
 # Citric Changelog
 
+## 1.0.15
+
+### Added
+- Added a couple more XML attributes for which resource file line markers can be displayed: `message/resource@file`, `transform/xslt@file`, `message/body/resource@file`, `ant@build-file`.
+- Added code folding for the Camel `remove-routes`, `start-routes` and `stop-routes` XML tags in the non-Spring XML DSL.
+- [52](https://github.com/picimako/citric/issues/52): Added code folding for the Spring `<meta-info>` tag, the WebSocket `server.endpoints` tag,
+  various Selenium action tags, and the Kubernetes `validate.element` tag.
+
+### Fixed
+- Fixed an `ArrayIndexOutOfBoundsException` that occurred during code folding of certain XML tags.
+- Fixed some of the XML tag folders to retrieve the proper local names of tags when determining the eligibility for folding.
+
+## 1.0.14
+
+### Added
+- [47](https://github.com/picimako/citric/issues/47): Added many more Spring XML attributes to the list of locations
+  where a line marker is displayed for Citrus resource paths.
+- Citric now works in the actual [Citrus GitHub project](https://github.com/citrusframework/citrus) via enabling it in
+  the Citric plugin settings with a newly introduced option.
+- Added `@CitrusSpringXmlTestFactory` to be recognized as Citrus JUnit 5 test factory annotations.
+- [40](https://github.com/picimako/citric/issues/40): Added code folding for various tags in the Citrus XML and Spring XML DSLs.
+
+### Changed
+- Citrus JUnit 5 classes are now recognized also when the `@ExtendWith` annotation is passed in multiple extension types.
+
+### Fixed
+- Fixed an exception that occurred when trying to get the last element of an empty collection.
+- Added missing description to an inspection.
+- Fixed a `StringIndexOutOfBoundsException` during annotation Citrus validation matchers.
+- Fixed an exception that occurred because of unchecked file absence.
+- Handled an `IndexNotReadyException` when checking Citrus TestNG test classes.
+- Fixed a false positive inspection report on missing conditions in `waitFor()` call chains.
+- Fixed a `NullPointerException` that occurred during registering Citrus resource file line markers.
+
+## 1.0.13
+
+### Added
+- [41](https://github.com/picimako/citric/issues/41): Added support for the current Citric feature set in the Citrus XML and Spring XML DSLs:
+  for example: code completions for content-types, message headers, SQL transaction isolation levels, also line markers for attributes
+  accepting Citrus resource paths, and more.
+
+### Changed
+- Updated the Spring bean completions' icons to distinguish them between Java and XML bean definitions.
+
+### Fixed
+- Fixed an exception regarding duplicate registration attempt of Run and Debug test source files line marker actions.
+
 ## 1.0.12
 
 ### Added
@@ -9,9 +56,9 @@
 - [32](https://github.com/picimako/citric/issues/32): Added an action into the editor Generate menu to generate `@CitrusSpringXmlTestFactory` methods in Citrus JUnit 5 test classes.
 - [32](https://github.com/picimako/citric/issues/32): Added an inspection to validate `@CitrusSpringXmlTestFactory` annotated test methods from various aspects.
 - [32](https://github.com/picimako/citric/issues/32): Added inspections to validate the combined usage of `@CitrusSpringXmlTestFactory` and non-Spring-XML test creation with `CitrusTestFactorySupport`,
-as well as to report various issues on calls on `CitrusTestFactorySupport`.
+  as well as to report various issues on calls on `CitrusTestFactorySupport`.
 - [32](https://github.com/picimako/citric/issues/32): Added a line marker to calls on `CitrusTestFactorySupport`, so that users can navigate to the test source files and directories
-referenced by those calls.
+  referenced by those calls.
 
 ### Changed
 - Improved Groovy expression evaluation logic, so that variable values are now also evaluated e.g. during container folding.
