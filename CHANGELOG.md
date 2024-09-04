@@ -1,5 +1,23 @@
 # Citric Changelog
 
+## 1.0.16
+
+### Added
+- [54](https://github.com/picimako/citric/issues/54): Added support for dash-separated YAML property names for YAML DSL specific features:
+  resource path line markers, Spring bean code completion and HTTP method code completion.
+- [54](https://github.com/picimako/citric/issues/54): Added code completion of `MessageType` constant values in the YAML DSL.
+- [54](https://github.com/picimako/citric/issues/54): Added an inspection to validate `MessageType` constant values in a case-insensitive way, in the YAML DSL.
+- [55](https://github.com/picimako/citric/issues/55): Added code folding of the closing tag parts of XML tags in Citrus XML and Spring XML test files.
+- [53](https://github.com/picimako/citric/issues/53): Added code completion of content types in `content-type` XML attributes, as well as other header `value` attributes.
+- [46](https://github.com/picimako/citric/issues/46): Added several different language injections in XML tags and attributes in the XML DSLs.
+
+### Changed
+- [54](https://github.com/picimako/citric/issues/54): Updated the YAML DSL schema for example to lift some of the restrictions on property names and types,
+  so that both camel-case and dash-separated names are permitted.
+
+### Fixed
+- [54](https://github.com/picimako/citric/issues/54): Fixed the YAML schema of SOAP fault objects.
+
 ## 1.0.15
 
 ### Added
