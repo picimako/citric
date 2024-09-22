@@ -1,5 +1,17 @@
 # Citric Changelog
 
+## 1.0.17
+
+### Added
+- Added JSON language injection into the `message.body.data` XML tag.
+
+### Changed
+- Supported IDE range is now 2024.1 - 2024.3.*
+- Added the supported Citrus DSL names to the titles of code folding options in the IDE settings.
+
+### Fixed
+- Code completions and inspections that require looking up Citrus classes in a project, can now find those classes also when the project is Citrus Framework itself.
+
 ## 1.0.16
 
 ### Added
