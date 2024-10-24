@@ -1,5 +1,43 @@
 # Citric Changelog
 
+## 1.0.18
+
+### Added
+- [50](https://github.com/picimako/citric/issues/50): Added Groovy language injection in the `actions.sql.validate.script.value` property in the YAML DSL.
+- [50](https://github.com/picimako/citric/issues/50): Added SQL language injection into
+  - `AbstractDatabaseConnectingTestAction.Builder.statement()` calls in the Java and Groovy DSLs,
+  - the `sql.statements.statement` and `sql.statement` tags in the XML and Spring XML DSLs, and
+  - the `actions.sql.statements.statement` and `actions.plsql.statements.statement` properties in the YAML DSL.
+- [50](https://github.com/picimako/citric/issues/50): Added `DataSource` bean completion in the `sql@datasource` attribute in the XML and Spring XML DSLs.
+- [50](https://github.com/picimako/citric/issues/50): Added `TransactionManager` bean completion in the `sql.transaction@manager` attribute in the XML,
+  and in the `sql@transaction-manager` attribute in the Spring XML DSLs.
+- [50](https://github.com/picimako/citric/issues/50): Added completion of SQL `SELECT` statement table column names in
+  - `ExecuteSQLQueryAction.Builder.validate()` and `ExecuteSQLQueryAction.Builder.extract()`
+    based on `statement()` and `sqlResource()` calls in same call chains, in the Java and Groovy DSLs.
+  - the `sql.validate@column` and `sql.extract@column` attributes based on related `statement` and `resource` tags in the XML DSLs.
+  - the `sql.validate.column` and `sql.extract.column` properties based on related `statement` and `file` properties in the YAML DSL.
+- Added Citrus resource line markers for the arguments of `create()`, `fromClassPath()` and `fromFileSystem()` of `org.citrusframework.spi.Resources`
+  in the Java and Groovy DSLs.
+
+### Changed
+- Improved the Groovy expression evaluation logic to include binary expressions like `"this is " + "concatenated string"`.
+
+### Fixed
+- Fixed a `NullPointerException` that occurred during folding XML closing tags.
+
+## 1.0.17
+
+### Added
+- Added JSON language injection into the `message.body.data` XML tag.
+
+### Changed
+- Supported IDE range is now 2024.1 - 2024.3.*
+- Added the supported Citrus DSL names to the titles of code folding options in the IDE settings.
+
+### Fixed
+- Code completions and inspections that require looking up Citrus classes in a project, can now find those classes
+  also when the project is Citrus Framework itself.
+
 ## 1.0.16
 
 ### Added
