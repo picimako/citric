@@ -1,5 +1,43 @@
 # Citric Changelog
 
+## 1.0.20
+
+### Changed
+- Supported IDE range is now 2024.1.7 - 2025.1.*
+
+## 1.0.19
+
+### Added
+- [59](https://github.com/picimako/citric/issues/59): Exceptions thrown by the plugin can now be submitted to the plugin author from the IDE directly.
+  [See the JetBrains Marketplace documentation](https://plugins.jetbrains.com/docs/marketplace/exception-analyzer.html) on how it works.
+- [57](https://github.com/picimako/citric/issues/57): Added XML, XPath, JSONPath, JSON, CSS and Groovy language injection in several properties in the YAML DSL. Currently,
+  it doesn't support **some** context-dependent properties, those will be added in later releases.
+- Added the missing `actions.camel.createRoutes.route` property to the YAML DSL schema, and marked `actions.camel.createRoutes.routeContext` deprecated.
+- Added YAML DSL schema for Citrus 4.3.2+.
+- Added code completion and syntax highlighting support for the **empty**, **notEmpty**, **null**, **notNull** and **hasLength** validation matchers.
+- [61](https://github.com/picimako/citric/issues/61): Added code completion and syntax highlighting support for the **isUUIDv4** validation matcher.
+- [61](https://github.com/picimako/citric/issues/61): Added default method argument value reporting for `HttpClientBuilder.disableRedirectHandling()`.
+- [61](https://github.com/picimako/citric/issues/61): Added an inspection for validating Kafka endpoint configurations in Spring XML files.
+- [61](https://github.com/picimako/citric/issues/61): Added code completion of Kafka message header selector and filter keys
+  (`header-filter-key`, `header-filter-value`, `header-filter-comparator`, `event-lookback-window`, `poll-timeout`) in the XML, Java and Groovy DSLs.
+- [61](https://github.com/picimako/citric/issues/61): Added inspection to report invalid Kafka message header selector value matching strategies in the XML DSLs.
+
+### Changed
+- Reorganized Gradle plugin-dependent features to make sure they are enabled only when the Gradle and related plugins are installed and enabled.
+- Improved the descriptions of some properties in the YAML DSL schema.
+- With the addition of support for the `isUUIDv4` validation matcher, validation matchers are now code completed in a Citrus version dependent way,
+  thus only when the particular validation matchers are available in the currently used Citrus version.
+- Citrus JUnit4 and Citrus JUnit5 test methods are now generated with the v4 package name of the `@CitrusTest` instead of its v3 package name.
+- Small improvements regarding language injections into Citrus YAML test files.
+- The 'iterate', 'seqeuntial' and 'conditional' containers' code foldings now signal (with a * symbol) if there is configuration
+  in the call chain that is hidden and is not displayed in the foldings' placeholder texts.
+
+### Fixed
+- Fixed an exception that occurred during caching Citrus file name patterns with a not yet ready index.
+- Fixed the logic for identifying YAML properties by their paths (e.g. in inspections or language injections).
+  Previously it skipped analyzing the last element of the path, thus plugin features may have been applied to false positive matches,
+  and a broader range of properties.
+
 ## 1.0.18
 
 ### Added
