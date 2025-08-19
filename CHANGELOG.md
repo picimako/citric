@@ -1,5 +1,19 @@
 # Citric Changelog
 
+## 1.0.21
+
+### Added
+- [58](https://github.com/picimako/citric/issues/58): Added an inspection that reports mixed SELECT and non-SELECT statements used in the same `ExecuteSqlAction.Builder.sql()`
+  or `ExecuteSqlQueryAction.Builder.query()` call chains in the Java and Groovy DSLs.
+- [58](https://github.com/picimako/citric/issues/58): Added an inspection that reports SELECT statement usage in `ExecuteSqlAction.Builder.sql()` call chains in the Java and Groovy DSLs.
+- [58](https://github.com/picimako/citric/issues/58): Added an inspection that reports non-SELECT statement usage in `ExecuteSqlQueryAction.Builder.query()` call chains in the Java DSL.
+
+### Changed
+- Supported IDE range is now 2025.1 - 2025.2+
+- [65](https://github.com/picimako/citric/issues/65): Reformatted some of the YAML DSL property descriptions using IntelliJ's built-in custom `x-intellij-html-description` property.
+- [65](https://github.com/picimako/citric/issues/65): Moved some programmatic language injections to use IntelliJ's built-in custom `x-intellij-language-injection` property.
+  Thus, slightly reducing the plugin archive's size, and simplifying maintenance.
+
 ## 1.0.20
 
 ### Changed
