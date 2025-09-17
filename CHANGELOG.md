@@ -1,5 +1,20 @@
 # Citric Changelog
 
+## 1.0.22
+
+### Changed
+- Supported IDE range is now 2025.2+
+- [68](https://github.com/picimako/citric/issues/68): Removed support for Citrus 3.x
+- Plugin settings are moved back to its original place under **Tools**.
+- The plugin settings UI got simplified for a better user experience.
+- Eliminated caching during the collection of matching test source methods, so the results should be more accurate.
+- Moved the **Go to Citrus Test Method** actions to a better location inside the Navigate menu.
+- **Run Test** and **Debug Test** action titles are named to **Run as Citrus Test** and **Debug as Citrus Test** to clarify which actions belong to Citric.
+
+### Fixed
+- When modifying and saving the plugin settings, code highlighters / annotators are rerun on open files to reflect the current state of the template annotation configuration.
+- The **Go to Citrus Test Method** action for Groovy files is added a new shortcut-key (Ctrl Shift G T) because it was shadowed by the IntelliJ Platform's own similar action.
+
 ## 1.0.21
 
 ### Added
