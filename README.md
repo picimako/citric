@@ -4,6 +4,9 @@
 
 Citric is an IntelliJ-based plugin that provides framework integration for the [Citrus](https://citrusframework.org/) framework.
 
+> [!IMPORTANT]
+> Citric is no longer in development and sales are suspended.
+
 It offers various tools to generate and validate Citrus related test code in the following areas, among others:
 - Citrus specific [JUnit and TestNG test frameworks](https://www.picimako.com/citric/test-frameworks), e.g. for generating Citrus test methods.
 - Validation and generation of Citrus test methods and TestNG specific `@CitrusParameters`.
@@ -15,11 +18,6 @@ It offers various tools to generate and validate Citrus related test code in the
 - Validation and conversion of [`@BindToRegistry` methods and fields](https://www.picimako.com/citric/citrus-registry-and-resource-injection/)
 - Numerous Citrus-specific static code analysis checks
 - Code folding of certain [containers](https://www.picimako.com/citric/containers/) and Hamcrest condition expressions for easier comprehension of test code
-
-## Purchase license
-
-The plugin is available via a paid license, and you can head over to the [JetBrains Marketplace](https://plugins.jetbrains.com/plugin/22813-citric)
-to get your hands on one. You can find more information about pricing and licensing options there, including a **14-day trial period**.
 
 ## Supported IDEs
 
