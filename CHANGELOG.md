@@ -1,5 +1,28 @@
 # Citric Changelog
 
+## 1.0.23
+
+### Added
+- [58](https://github.com/picimako/citric/issues/58): Added an inspection that reports non-SELECT statement usage in `ExecuteSqlQueryAction.Builder.query()` call chains in the Groovy DSL.
+- [62](https://github.com/picimako/citric/issues/62): Added code completion for the `escapeJson` Citrus function introduced in Citrus 4.5.1.
+- [62](https://github.com/picimako/citric/issues/62): Added code completion for the `citrus.test.actor.<action_name>.enabled` Citrus system property in citrus-application.properties files.
+- [62](https://github.com/picimako/citric/issues/62): `endpoints` and `beans` sub-properties of the Groovy YAML test action are now supported in its schema and in language injection.
+- [62](https://github.com/picimako/citric/issues/62): Plain text `script` properties of the Groovy YAML test action are now supported both in the YAML DSL schema and in language injection.
+- [62](https://github.com/picimako/citric/issues/62): Support for the Groovy XML test action `script-template` attribute is added in resource path line markers.
+
+### Changed
+- Many refactorings and simplifications under the hood.
+- Improved the language injection logic in YAML test files.
+- [67](https://github.com/picimako/citric/issues/67): Moved a handful of CSS, JSON, JSONPath, XML and XPath language injections from code to the YAML DSL schema.
+- [67](https://github.com/picimako/citric/issues/67): Moved SOAP send-fault message type and wait-for HTTP method code completions from code to the YAML DSL schema.
+- [69](https://github.com/picimako/citric/issues/69): The YAML DSL schema is no longer provided specific to the used Citrus version, but provides a single schema regardless of that.
+The current schema is up to date with Citrus v4.5.2.
+
+### Fixed
+- Fixed the YAML DSL schema of the Groovy script action.
+- Fixed the persistence of plugin settings.
+- [62](https://github.com/picimako/citric/issues/62): Fixed the name of the `template` property of the Groovy YAML test action in the YAML DSL schema and in resource path line markers.
+
 ## 1.0.22
 
 ### Changed
